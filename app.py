@@ -1,4 +1,4 @@
-'''Modeling taxi ride data'''
+'''TODO: Write better docstring'''
 from flask import Flask, request, render_template
 from datetime import datetime
 
