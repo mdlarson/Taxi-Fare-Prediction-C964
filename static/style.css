@@ -115,6 +115,18 @@ button:hover {
     background: #555;
 }
 
+/* Prediction styling */
+div.prediction {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+div.prediction p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 /* Footer styling */
 footer {
     padding: 10px;
