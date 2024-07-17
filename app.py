@@ -6,34 +6,38 @@ import pandas as pd
 
 app = Flask(__name__)
 
-# Load the Model
+# Load Model and Feature Names
 model = joblib.load('model.pkl')
+feature_names = joblib.load('feature_names.pkl')
 
 
-# Home and Summary Pages
-@app.route('/')
+# Home Page
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
+    prediction = None
+
+    if request.method == 'POST':
+        hour_of_day = int(request.form['hour_of_day'])
+        pickup_location = int(request.form['pickup_location'])
+
+        # Create dataframe and initialize dummy columns
+        input_data = pd.DataFrame({col: [0] for col in feature_names})
+        input_data['hour_of_day'] = hour_of_day
+
+        # Set relevant PULocationID to 1
+        input_data[f'PULocationID_{pickup_location}'] = 1
+
+        # Predict the fare
+        prediction = model.predict(input_data)[0]
+
+    return render_template('index.html', prediction=prediction)
 
 
+# Summary Page
 @app.route('/summary')
 def summary():
     # Generate summary statistics and visualizations
     return render_template('summary.html')
-
-
-# Fare Prediction
-@app.route('/predict', methods=['POST'])
-def predict():
-    pickup_time = request.form['pickup_time']
-    pickup_location = request.form['pickup_location']
-
-    input_data = pd.DataFrame([[pickup_time, pickup_location]],
-                              columns=['columne_name', 'columne_name2'])
-
-    prediction = model.predict(input_data)[0]
-
-    return render_template('result.html', prediction=prediction)
 
 
 if __name__ == '__main__':
