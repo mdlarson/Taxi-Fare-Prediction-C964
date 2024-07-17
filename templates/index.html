@@ -4,25 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/style.css">
     <title>Taxi Fare Prediction</title>
 </head>
 
 <body>
     <header>
         <h1>Taxi Fare Prediction</h1>
-        <p>Provide the time and location for pickup.</p>
-        <p>The app predicts the fare that our HVFHV competitors will charge.</p>
     </header>
     <main>
+
+
         <form action="/" method="post">
-            <label for="hour_of_day">What hour of the day? (0–23)</label>
-            <input type="number" id="hour_of_day" name="hour_of_day" style="width: 5em" min="0" max="23" required>
-            <br><br>
-            <label for="pickup_location">What pickup location? (ID #)</label>
-            <input type="number" id="pickup_location" name="pickup_location" style="width: 5em" min="0" max="263"
-                required>
-            <br><br>
+            <div>
+                <p>Provide the time and location for pickup. The app predicts the fare that our HVFHV competitors will
+                    charge.</p>
+            </div>
+            <div>
+                <label for="hour_of_day">What hour of the day? (0–23)</label>
+                <input type="number" id="hour_of_day" name="hour_of_day" style="width: 5em" min="0" max="23" required>
+            </div>
+            <div>
+                <label for="pickup_location">What pickup location? (ID #)</label>
+                <input type="number" id="pickup_location" name="pickup_location" style="width: 5em" min="0" max="263"
+                    required>
+            </div>
             <button type="submit">Predict Fare</button>
         </form>
 
@@ -31,7 +37,7 @@
         {% endif %}
 
     </main>
-    <footer><a href="/summary">Summary Statistics</a></footer>
+    <footer>Footer Text</footer>
 </body>
 
 </html>
