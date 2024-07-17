@@ -60,7 +60,6 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a.active {
     background-color: #fff;
-    /* border-bottom: 2px solid #333; */
 }
 
 /* Main content styling */
@@ -69,14 +68,15 @@ main {
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* Form styling */
 form {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 50%;
 }
 
 form div {
@@ -117,14 +117,18 @@ button:hover {
 
 /* Prediction styling */
 div.prediction {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 40%;
+    padding-left: 20px;
+    border-left: 1px solid #ccc;
 }
 
 div.prediction p {
-    display: flex;
-    align-items: center;
+    font-size: 2rem;
     margin-bottom: 20px;
+}
+
+div.prediction p.cost {
+    font-size: 4rem;
 }
 
 /* Footer styling */

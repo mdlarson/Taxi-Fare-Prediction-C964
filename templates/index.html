@@ -36,11 +36,11 @@
             <button type="submit">Predict Fare</button>
         </form>
         <div class="prediction">
+            <p>Predicted Fare:</p>
             {% if prediction is not none %}
-            <p>Predicted Fare: {{ "$" if prediction }} {{ "%.2f" | format(prediction) }}</p>
+            <p class="cost">{{ "$" if prediction }} {{ "%.2f" | format(prediction) }}</p>
             {% endif %}
         </div>
-
     </main>
     <footer>Footer Text</footer>
 </body>
