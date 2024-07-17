@@ -1,1 +1,150 @@
-/* initial commit */
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Navigation styling */
+nav {
+    margin-bottom: 3px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    background-color: #f4f4f4;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #fff;
+}
+
+/* Main content styling */
+main {
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Form styling */
+form {
+    max-width: 50%;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    width: 50%;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    flex: 1;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #333;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* Prediction styling */
+div.prediction {
+    max-width: 40%;
+    padding-left: 20px;
+    border-left: 1px solid #ccc;
+}
+
+div.prediction p {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+div.prediction p.cost {
+    font-size: 4rem;
+}
+
+/* Footer styling */
+footer {
+    padding: 10px;
+    background: #aaa;
+    color: #fff;
+    border-top: 1px solid #eaeaea;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
