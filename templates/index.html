@@ -13,12 +13,12 @@
     </header>
     <main>
         <form action="/predict" method="post">
-            <label for="pickup_time">Pickup Time</label>
-            <input type="datetime-local" id="pickup_time" name="pickup_time" required>
-            <br>
-            <label for="pickup_location">Pickup Location</label>
-            <input type="text" id="pickup_location" name="pickup_location" required>
-            <br>
+            <label for="hour_of_day">What hour of the day? (0–23)</label>
+            <input type="number" id="hour_of_day" name="hour_of_day" min="0" max="23" required>
+            <br><br>
+            <label for="pickup_location">What pickup location? (ID #)</label>
+            <input type="number" id="pickup_location" name="pickup_location" min="0" max="270" required>
+            <br><br>
             <button type="submit">Predict Fare</button>
         </form>
     </main>
