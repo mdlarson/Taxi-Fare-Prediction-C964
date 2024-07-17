@@ -21,8 +21,8 @@
     <main>
         <form action="/" method="post">
             <div>
-                <p>Provide the time and location for pickup. The app predicts the fare that our HVFHV competitors will
-                    charge.</p>
+                <p>Enter the time and location for pickup. The model will predict the fare that our HVFHV competitors
+                    would charge for the same trip.</p>
             </div>
             <div>
                 <label for="hour_of_day">What hour of the day? (0–23)</label>
@@ -39,6 +39,7 @@
         {% if prediction is not none %}
         <p>Predicted Fare: {{ "$" if prediction }} {{ "%.2f" | format(prediction) }}</p>
         {% endif %}
+
 
     </main>
     <footer>Footer Text</footer>
