@@ -2,6 +2,7 @@
 from flask import Flask, request, render_template
 import joblib
 import pandas as pd
+from datetime import datetime
 
 
 app = Flask(__name__)
@@ -17,7 +18,10 @@ def index():
     prediction = None
 
     if request.method == 'POST':
-        hour_of_day = int(request.form['hour_of_day'])
+        # Convert time string to integer hour of day
+        time_str = request.form['hour_of_day']  # e.g. 15:32
+        hour_of_day = datetime.strptime(time_str, '%H:%M').hour
+
         pickup_location = int(request.form['pickup_location'])
 
         # Create dataframe and initialize dummy columns
