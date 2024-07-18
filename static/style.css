@@ -98,6 +98,14 @@ input[type="number"] {
     flex: 1;
 }
 
+input[type="time"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    flex: 1;
+}
+
 /* Button styling */
 button {
     padding: 10px 20px;
