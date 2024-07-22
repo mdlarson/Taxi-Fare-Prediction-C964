@@ -20,40 +20,41 @@
     </nav>
     <main>
         <div class="viz">
-            <p>1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <p>The selected visualizations below will help summarize the taxi fare data behind the model, and better
+                understand the competitive landscape as a whole.</p>
+            <p>Average Cost by Borough<br>
+                As expected, we see below in the _____graph_type____ that trips originating in
+                Staten
+                Island are the most expensive, and trips originating in Queens are the least expensive. This is largely
+                a function of distance from LGA.</p>
             <img src="{{ url_for('static', filename='catplot_avg_cost_by_borough.png') }}"
                 alt="Average Cost by Borough">
 
-            <p>2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <p>Top Pickup Locations<br>
+                In the _____graph_type____ below, note the log scale on the x-axis. Riders in
+                Manhattan make up the largest share of
+                trips, more than all other boroughs combined. (High-cost outliers were excluded from the model, which
+                significantly reduces the number of trips originating in Staten Island in this figure, with benefit of
+                improving overall model accuracy.)</p>
             <img src="{{ url_for('static', filename='barplot_top_pickup_locations.png') }}" alt="Top Pickup Locations">
 
-            <p>3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <p>Distribution of Fares<br>
+                Fares have a two-peaked distribution, with a local maximum around $18-22 and
+                overall maximum at $50–55. The dip in cost is a result of variance in congestion fees and tolls for
+                local trips of similar distance.</p>
             <img src="{{ url_for('static', filename='histplot_distribution_of_fares.png') }}"
                 alt="Distribution of Fares">
-            <p>4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <p>Average Cost by Pickup Hour<br>
+                The _____graph_type____ shows that trip costs increase steadily through the early morning
+                hours, plateau from mid-morning through lunch hours, creat to peak afternoon commute/rush hours, then
+                steeply decline through the evening. There appears to exist an arbitrage opportunity for riders after
+                9pm and before midnight. Though there is higher variance at those hours, the typical ride costs ~10–20%
+                less than the hours immediately before and after.</p>
             <img src="{{ url_for('static', filename='barplot_avg_cost_by_pickup_hour.png') }}"
                 alt="Average Cost by Pickup Hour">
-            <p>5 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <p>Cost by Hour of Day<br>
+                The below _____graph_type____ offers another look at variance in cost through the
+                course of the day.</p>
             <img src="{{ url_for('static', filename='boxplot_cost_by_hour_of_day.png') }}" alt="Cost by Hour of Day">
         </div>
     </main>
