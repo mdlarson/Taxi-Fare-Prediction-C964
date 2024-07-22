@@ -8,7 +8,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 # Load Model and Feature Names
-model = joblib.load('model.pkl')
+model = joblib.load('modelv3.pkl')
 feature_names = joblib.load('feature_names.pkl')
 
 
