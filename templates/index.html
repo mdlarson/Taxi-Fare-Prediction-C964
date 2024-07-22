@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/style.css">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
+    <meta name="keywords" content="taxi fares, taxi fare prediction, nyc taxi fares, nyc taxi fare prediction">
+    <meta name="description" content="Predict NYC taxi fares to LaGuardia Airport (LGA) based on time and location.">
+    <meta name="author" content="Mark Larson">
     <title>Taxi Fare Prediction</title>
 </head>
 
@@ -21,8 +25,8 @@
     <main>
         <form action="/" method="post">
             <div>
-                <p>Enter the time and location for pickup. The model will predict the fare that our competitors
-                    would charge for the same trip.</p>
+                <p>Enter the pickup time and location. The model will predict the fare that our competitors
+                    would charge for the same trip to LaGuardia Airport.</p>
             </div>
             <div>
                 <label for="hour_of_day">What pickup time?</label>
