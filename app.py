@@ -1,4 +1,10 @@
-'''TODO: Write better docstring'''
+'''
+Flask Web App for Taxi Fare Prediction
+
+This Flask app supports a user interface for predicting taxi fares based on input trip details. 
+It uses a trained Random Forest Regression model to generate fare predictions, and includes features 
+for data input, prediction, and visualization.
+'''
 from flask import Flask, request, render_template
 import joblib
 import pandas as pd
@@ -24,11 +30,11 @@ def index():
 
         pickup_location = int(request.form['pickup_location'])
 
-        # Create dataframe and initialize dummy columns
+        # Create dataframe and initialize dummy columns to 0/false
         input_data = pd.DataFrame({col: [0] for col in feature_names})
         input_data['hour_of_day'] = hour_of_day
 
-        # Set relevant PULocationID to 1
+        # Set relevant PULocationID to 1/true
         input_data[f'PULocationID_{pickup_location}'] = 1
 
         # Predict the fare
@@ -40,7 +46,6 @@ def index():
 # Summary Page
 @app.route('/summary')
 def summary():
-    # Generate summary statistics and visualizations
     return render_template('summary.html')
 
 
