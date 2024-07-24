@@ -1,8 +1,10 @@
 '''
-Extracts ID and borough from list of NYC Taxi Zones.
+Parse and Process NYC Taxi Zones Data
 
-This script reads an input CSV file, extracts the columns of interest, and writes them to an output CSV file.
-It handles large field sizes by increasing the CSV field size limit.
+This script parses and processes NYC Taxi Zones data to associate pickup and dropoff locations with 
+their respective boroughs. The processed data is used to enhance the feature set for the taxi fare 
+prediction model. The script reads an input CSV file, extracts the columns of interest, and writes 
+them to an output CSV file. It handles large field sizes by increasing the CSV field size limit.
 
 Columns of Interest:
     - OBJECTID
